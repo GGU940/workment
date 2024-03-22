@@ -1,0 +1,139 @@
+.mainVisual {
+    position: relative;
+    display: flex;
+    border-top: none;
+    background-color: #C2F4FF;
+}
+
+.mainVisual .mw {
+    background-color: #FFE3CE;
+
+}
+
+.mainVisual .inner {
+    /* border-left: 4px solid #2e2e2e;
+    border-right: 4px solid #2e2e2e; */
+
+    padding: 150px 64px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainVisual h2 span {
+    display: block;
+    font-size: 30px;
+    background-color: #F2ED72;
+    width: 200px;
+    height: 58px;
+    border-radius: 999px;
+    border: 4px solid #2e2e2e;
+    text-align: center;
+    line-height: 54px;
+    margin: 8px 0;
+}
+
+.mainVisual p {
+    padding: 16px 0;
+}
+
+
+
+/* side */
+.mainVisual .sideBar {
+    border: 2px solid green;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.mainVisual .sideBar a {
+    /* border: 2px solid red; */
+    padding: 12px;
+    margin: 2px 0;
+
+}
+
+
+
+/* swiper */
+
+.mainVisual .swiperBox {
+    border: 3px solid blue;
+
+    width: 40%;
+    padding-top: 40%;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.mainVisual .mainSwiper {
+    border: 3px solid goldenrod;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+
+.mainVisual .mainSwiper .swiper-wrapper .card {
+    border: 2px solid green;
+    height: 100% !important;
+    width: 100% !important;
+    transform-style: flat !important;
+}
+
+.mainVisual .mainSwiper .swiper-wrapper .card img {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width:1000px) {
+
+    /* 태블릿 */
+
+    .mainVisual .inner {
+        padding: 100px 64px;
+
+    }
+
+    .mainVisual .swiperBox {
+        width: 300px;
+        height: 300px;
+        padding-top: 300px;
+        margin-right: 0;
+
+    }
+}
+
+@media (max-width:880px) {
+
+    /* 모바일 */
+    .mainVisual .inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        /* justify-content: center; */
+    }
+
+    .mainVisual h2 span {
+        margin: 8px auto;
+
+    }
+
+    .mainVisual h2 br {
+        display: none;
+    }
+
+    .mainVisual .swiperBox {
+        width: 200px;
+        height: 200px;
+        padding-top: 200px;
+        /* top: 100px; */
+    }
+}
