@@ -43,10 +43,8 @@
     right: 80px;
 }
 
-.mainVisual .mw .inner>div::before {
+.mainVisual .mw .inner>div:first-of-type:before {
     content: "";
-    /* border: 2px solid red; */
-    /* z-index: 0; */
     width: 100px;
     height: 100px;
     background-image: url(../img/Star\ 2.svg);
