@@ -11,12 +11,49 @@
 }
 
 .mainVisual .inner {
-    /* border-left: 4px solid #2e2e2e;
-    border-right: 4px solid #2e2e2e; */
-
-    padding: 150px 64px;
+    padding: 150px 64px 100px 64px;
     display: flex;
     justify-content: space-between;
+}
+
+.mainVisual .mw .inner::before {
+    content: "";
+    /* border: 2px solid red; */
+    /* z-index: 0; */
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/Polygon\ 2.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 70px;
+    left: 200px;
+}
+
+.mainVisual .mw .inner::after {
+    content: "";
+    /* border: 2px solid red; */
+    z-index: 10;
+    width: 240px;
+    height: 240px;
+    background-size: contain;
+    background-image: url(../img/Circle\ Icon.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 270px;
+    right: 80px;
+}
+
+.mainVisual .mw .inner>div::before {
+    content: "";
+    /* border: 2px solid red; */
+    /* z-index: 0; */
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/Star\ 2.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 70px;
+    left: 500px;
 }
 
 .mainVisual h2 span {
