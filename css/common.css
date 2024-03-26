@@ -47,7 +47,9 @@
     border-bottom: 0;
 }
 
-
+section {
+    overflow: hidden;
+}
 
 section h2 {
     font-family: "Syncopate", sans-serif;

@@ -3,6 +3,7 @@
     display: flex;
     border-top: none;
     background-color: #C2F4FF;
+
 }
 
 .mainVisual .mw {
@@ -19,7 +20,6 @@
 .mainVisual .mw .inner::before {
     content: "";
     /* border: 2px solid red; */
-    /* z-index: 0; */
     width: 100px;
     height: 100px;
     background-image: url(../img/Polygon\ 2.svg);
@@ -40,7 +40,7 @@
     background-repeat: no-repeat;
     position: absolute;
     bottom: 270px;
-    right: 80px;
+    right: 4vw;
 }
 
 .mainVisual .mw .inner>div:first-of-type:before {
@@ -52,6 +52,11 @@
     position: absolute;
     bottom: 70px;
     left: 500px;
+}
+
+.mainVisual h2 {
+    position: relative;
+    z-index: 5;
 }
 
 .mainVisual h2 span {
@@ -97,7 +102,7 @@
 /* swiper */
 
 .mainVisual .swiperBox {
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
 
     width: 40%;
     padding-top: 40%;
@@ -107,7 +112,7 @@
 }
 
 .mainVisual .mainSwiper {
-    border: 3px solid goldenrod;
+    /* border: 3px solid goldenrod; */
     position: absolute;
     height: 100%;
     width: 100%;
@@ -116,15 +121,18 @@
 
 
 .mainVisual .mainSwiper .swiper-wrapper .card {
-    border: 2px solid green;
     height: 100% !important;
     width: 100% !important;
     transform-style: flat !important;
+    /* border: 4px solid #2e2e2e; */
+
 }
+
 
 .mainVisual .mainSwiper .swiper-wrapper .card img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 
@@ -144,6 +152,17 @@
         margin-right: 0;
 
     }
+
+    .mainVisual .mw .inner::after {
+        width: 200px;
+        height: 200px;
+        background-size: contain;
+        background-image: url(../img/Circle\ Icon.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 270px;
+        right: -70px;
+    }
 }
 
 @media (max-width:880px) {
@@ -153,11 +172,23 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        /* justify-content: center; */
+        padding-bottom: 60px;
+
+    }
+
+    .mainVisual .mw .inner::after {
+        display: none;
+    }
+
+    .mainVisual h2 {
+        color: white;
+        text-shadow: #2e2e2e -4px 4px 0;
     }
 
     .mainVisual h2 span {
         margin: 8px auto;
+        color: #2e2e2e;
+        text-shadow: none;
 
     }
 
@@ -165,10 +196,48 @@
         display: none;
     }
 
+    .mainVisual .mw {
+        overflow: hidden;
+    }
+
+    .mainVisual .inner .txtBox p {
+        position: absolute;
+        width: 120%;
+        top: 55px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+        z-index: 2;
+    }
+
+    .mainVisual .more {
+        margin: 0 auto 0;
+        margin-top: 250px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .mainVisual .more a {
+        padding: 0px 48px 0px 20px;
+    }
+
     .mainVisual .swiperBox {
-        width: 200px;
-        height: 200px;
-        padding-top: 200px;
-        /* top: 100px; */
+        position: absolute;
+        width: 105%;
+        height: 105%;
+        /* padding-top: 50%; */
+        bottom: -2%;
+        /* top: 270px; */
+        margin: 0 auto;
+        overflow: hidden;
+
+    }
+
+    .mainVisual .swiperBox .card {
+        background-color: #C2F4FF;
+    }
+
+    .mainVisual .swiperBox .card img {
+        opacity: 0.7;
     }
 }
