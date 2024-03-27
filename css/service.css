@@ -11,16 +11,38 @@
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    padding: 150px 0;
+    padding: 150px 0 100px 0;
 }
 
-.service .inner>* {
-    border: 1px solid darkgoldenrod;
+.service .inner h2 {
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.service .inner h2::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 80px;
+    /* border: 1px solid fuchsia; */
+    background-image: url(../img/SettingIcon.svg);
+    background-size: cover;
+    position: absolute;
+    right: -20%;
+    top: -50%;
+}
+
+.service .inner h2 {
+    z-index: 10;
 }
 
 .service .inner>p {
-    padding: 28px;
+    padding: 18px;
+    text-align: center;
 }
+
+
+/* ------ serviceBoxs serviceCard------ */
 
 .service .inner .serviceBoxs {
     display: flex;
@@ -94,6 +116,8 @@
     margin: 28px 0;
 }
 
+
+/* ------ more ------ */
 .service .serviceCard .more {
     /* border: 2px solid olive; */
     position: absolute;
@@ -104,7 +128,7 @@
 }
 
 .service .serviceCard .more .moreText {
-    border: 2px solid gold;
+    /* border: 2px solid gold; */
     position: absolute;
     bottom: 50px;
     left: 32px;
@@ -112,8 +136,16 @@
 
 .service .serviceCard .more .moreText::after {
     background-image: url(../img/arrow45dark.svg);
-
+    top: 0;
+    right: -30px;
 }
+
+.service .serviceCard .more:hover>.moreText::after {
+    top: -5px;
+    right: -35px;
+}
+
+/* -------  .moreBar  --------- */
 
 .service .moreBar {
     background-color: #2e2e2e;
@@ -133,4 +165,23 @@
 .service .moreBar:hover>.moreText::after {
     left: calc(50% + 105px);
     top: 25px;
+}
+
+/*--------- sidebar ---------*/
+
+.service .sideL span {
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    /* 텍스트를 왼쪽에서 오른쪽으로 세로로 배치. */
+    text-orientation: sideways;
+    /* 텍스트의 방향을 옆으로 설정. */
+
+}
+
+
+
+@media (max-width:1100px) {
+    /* 태블릿 */
+
+
 }
