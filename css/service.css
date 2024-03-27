@@ -5,3 +5,132 @@
 .service .mw {
     background-color: #fff;
 }
+
+.service .inner {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 150px 0;
+}
+
+.service .inner>* {
+    border: 1px solid darkgoldenrod;
+}
+
+.service .inner>p {
+    padding: 28px;
+}
+
+.service .inner .serviceBoxs {
+    display: flex;
+    border-top: 4px solid #2e2e2e;
+    border-bottom: 4px solid #2e2e2e;
+    margin: 64px 0;
+}
+
+.service .serviceCard {
+    padding: 100px 32px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.service .serviceCard:nth-last-of-type(2) {
+    border-left: 4px solid #2e2e2e;
+    border-right: 4px solid #2e2e2e;
+}
+
+.service .serviceCard::before {
+    content: "";
+    border: 4px solid #2e2e2e;
+    border-radius: 99px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    position: absolute;
+    top: -35px;
+    left: 30px;
+    width: 90px;
+    height: 90px;
+    transition: 0.3s;
+
+}
+
+.service .serviceCard:nth-of-type(1)::before {
+    background-image: url(../img/Icon2-1.svg);
+    background-size: 50%;
+}
+
+
+.service .serviceCard:nth-of-type(2)::before {
+    background-image: url(../img/Icon2-3.svg);
+    background-size: 60%;
+}
+
+.service .serviceCard:nth-of-type(3)::before {
+    background-image: url(../img/Icon2-2.svg);
+    background-size: 50%;
+}
+
+.service .serviceCard:hover {
+    background-color: #FFE3CE;
+}
+
+.service .serviceCard:hover::before {
+    box-shadow: -4px 4px 0 #2e2e2e;
+    background-color: #FFF969;
+}
+
+.service .serviceCard strong {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+
+}
+
+.service .serviceCard p {
+    margin: 28px 0;
+}
+
+.service .serviceCard .more {
+    /* border: 2px solid olive; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.service .serviceCard .more .moreText {
+    border: 2px solid gold;
+    position: absolute;
+    bottom: 50px;
+    left: 32px;
+}
+
+.service .serviceCard .more .moreText::after {
+    background-image: url(../img/arrow45dark.svg);
+
+}
+
+.service .moreBar {
+    background-color: #2e2e2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 80px;
+}
+
+.service .moreBar>.moreText::after {
+    left: calc(50% + 100px);
+}
+
+
+.service .moreBar:hover>.moreText::after {
+    left: calc(50% + 105px);
+    top: 25px;
+}

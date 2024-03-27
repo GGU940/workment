@@ -85,68 +85,82 @@ section p {
 .sideR {
     right: 0;
     top: 0;
-
 }
 
 .inner {
     border-left: 4px solid #2E2E2E;
     border-right: 4px solid #2E2E2E;
-
     margin-left: calc(100% * 1 / 14);
     /* margin-right: calc(100% * 1 / 14); */
     width: calc(100% - (100% * 1 / 7));
     max-width: 1200px;
 }
 
-
-.moreBlack {
+.more {
     font-family: "Syncopate", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: var(--font-sSub);
-    /* background-color: #2E2E2E; */
-    border: 4px solid #2E2E2E;
-    /* outline: 4px solid #2E2E2E; */
-    color: white;
-    width: 260px;
-    height: 70px;
     position: relative;
-    margin: 24px 0;
+    display: block;
+
 
 }
 
+.more>.moreText {
+    transition: 0.3s;
+}
 
-.moreBlack>a {
+.more>.moreText::after {
+    content: "";
+    background-image: url(../img/arrow45.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 14px;
+    height: 15px;
+    margin-left: 16px;
+    position: absolute;
+    top: calc(50% - 9px);
+
+    transition: 0.3s;
+}
+
+.moreBlack {
+    color: white;
+    width: 250px;
+    height: 70px;
     outline: 4px solid #2E2E2E;
     background-color: #2E2E2E;
-    display: block;
-    line-height: 64px;
-    width: 100%;
-    height: 100%;
-    padding: 0 32px;
-    position: absolute;
-    transition: 0.3;
-
+    padding: 24px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
 }
 
-.moreBlack:hover>a {
+.moreBlack:hover {
     bottom: 12px;
     left: 12px;
 }
 
-.moreBlack>a::after {
+.moreBlack::before {
     content: "";
-    display: inline-block;
+    outline: 4px solid #2E2E2E;
+    display: block;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    width: 16px;
-    height: 16px;
-    background-image: url(../img/arrow45deg.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    right: 32px;
-    top: calc(50% - 8px);
-
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
 }
+
+.moreBlack:hover::before {
+    bottom: -12px;
+    left: -12px;
+}
+
+
 
 /* header */
 .hd {
