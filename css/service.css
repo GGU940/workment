@@ -171,17 +171,6 @@
     top: 25px;
 }
 
-/*--------- sidebar ---------*/
-
-.service .sideL span {
-    transform: rotate(180deg);
-    writing-mode: vertical-rl;
-    /* 텍스트를 왼쪽에서 오른쪽으로 세로로 배치. */
-    text-orientation: sideways;
-    /* 텍스트의 방향을 옆으로 설정. */
-
-}
-
 
 
 @media (max-width:1100px) {

@@ -57,7 +57,14 @@ section h2 {
     font-style: normal;
     font-size: var(--font-sMain);
     line-height: 120%;
+}
 
+section h3 {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 120%;
 }
 
 section p {
@@ -84,6 +91,15 @@ section p {
     font-family: "Syncopate", sans-serif;
     font-weight: 700;
     font-style: normal;
+}
+
+.sideBarVertical {
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    /* 텍스트를 왼쪽에서 오른쪽으로 세로로 배치. */
+    text-orientation: sideways;
+    /* 텍스트의 방향을 옆으로 설정. */
+
 }
 
 .sideL {
