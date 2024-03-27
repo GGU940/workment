@@ -19,6 +19,10 @@
     position: relative;
 }
 
+.service .inner h2>br {
+    display: none;
+}
+
 .service .inner h2::before {
     content: "";
     display: block;
@@ -183,5 +187,79 @@
 @media (max-width:1100px) {
     /* 태블릿 */
 
+    .service .serviceCard {
+        padding: 100px 32px 60px 32px;
+    }
+}
 
+
+
+@media (max-width:850px) {
+
+    /* service card 조정 */
+
+    .service .inner {
+        padding: 250px 0 150px 0;
+    }
+
+    .service .inner h2::before {
+        right: calc(50% - 40px);
+        top: -250%;
+    }
+
+    .service .inner .serviceBoxs {
+        flex-direction: column;
+        margin: 64px;
+        border-left: 4px solid #2e2e2e;
+        border-right: 4px solid #2e2e2e;
+    }
+
+    .service .serviceCard:nth-last-of-type(2) {
+        border-left: none;
+        border-right: none;
+        border-top: 4px solid #2e2e2e;
+        border-bottom: 4px solid #2e2e2e;
+        text-align: right;
+    }
+
+    .service .serviceCard:nth-last-of-type(2)::before {
+        left: auto;
+        right: 32px;
+    }
+
+    .service .serviceCard:nth-last-of-type(2) .more .moreText {
+        left: auto;
+        right: 64px;
+    }
+
+    .service .serviceCard::before {
+        top: -20px;
+    }
+
+    .service .serviceCard {
+        padding: 110px 32px;
+    }
+
+    .service .serviceCard .more .moreText {
+        bottom: 80px;
+    }
+}
+
+@media (max-width:750px) {
+    .service .inner {
+        padding: 150px 0 100px 0;
+    }
+
+    .service .inner h2 {
+        text-align: center;
+    }
+
+    .service .inner h2>br {
+        display: block;
+    }
+
+    .service .inner h2::before {
+        /* right: calc(50% - 40px); */
+        top: -130%;
+    }
 }
