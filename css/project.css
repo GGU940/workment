@@ -82,6 +82,7 @@
     width: 60%;
     padding-top: 60%;
     border: 4px solid #2e2e2e;
+    position: relative;
 }
 
 .project .pjBox:nth-of-type(1) .imgArea {
@@ -98,4 +99,28 @@
 
 .project .pjBox:nth-of-type(4) .imgArea {
     background-image: url(../img/Background04.svg);
+}
+
+
+
+.project .imgArea .maskImg {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    top: 15%;
+    left: 15%;
+    /* border: 4px solid #2e2e2e; */
+}
+
+.project .pjBox:nth-of-type(1) .imgArea .maskImg {
+    width: 80%;
+    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+    top: 15%;
+    left: 10%;
+    /* border: 4px solid #2e2e2e; */
+}
+
+.project .pjBox:nth-of-type(2) .imgArea .maskImg {
+    clip-path: circle(50% at center);
 }

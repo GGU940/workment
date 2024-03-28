@@ -2,18 +2,42 @@
     overflow: hidden;
     border-top: 4px solid #2e2e2e;
     border-bottom: 4px solid #2e2e2e;
+    display: flex;
+    position: relative;
+    white-space: nowrap;
 }
 
 .wideScrollText {
-    width: 3000px;
+    flex-grow: 1;
+    /* border: 3px solid red; */
+    text-transform: uppercase;
+    position: relative;
     display: flex;
-    justify-content: space-around;
+    gap: 40px;
+    padding: 0 20px;
     align-items: center;
+    transform: translateX(0);
+    /* animation-name: scrollRtoL;
+    animation-duration: 15000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; */
 }
+
 
 .scrollText .wideScrollText span {
     font-size: 60px;
     font-family: "Syncopate", sans-serif;
     font-weight: 700;
     font-style: normal;
+}
+
+
+@keyframes scrollRtoL {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
