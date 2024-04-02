@@ -80,24 +80,19 @@
 
 /* side */
 .mainVisual .sideBar {
-    border: 2px solid green;
     font-size: 24px;
 }
 
 .mainVisual .sideBar a {
-    /* border: 2px solid red; */
     padding: 12px;
     margin: 2px 0;
 
 }
 
 
-
 /* swiper */
 
 .mainVisual .swiperBox {
-    /* border: 3px solid blue; */
-
     width: 40%;
     padding-top: 40%;
     position: relative;
@@ -106,7 +101,6 @@
 }
 
 .mainVisual .mainSwiper {
-    /* border: 3px solid goldenrod; */
     position: absolute;
     height: 100%;
     width: 100%;
@@ -118,7 +112,6 @@
     height: 100% !important;
     width: 100% !important;
     transform-style: flat !important;
-    /* border: 4px solid #2e2e2e; */
 
 }
 
