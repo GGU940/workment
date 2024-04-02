@@ -1,0 +1,158 @@
+.counter {
+    background-color: #C2F4FF;
+}
+
+.counter .mw {
+    background-color: #2e2e2e;
+    padding: 120px 0;
+    color: white;
+    text-align: center;
+}
+
+.counter .inner>p {
+    width: 40%;
+    margin: 32px auto;
+}
+
+.counter .countGrid {
+    display: flex;
+    /* margin: 64px; */
+    justify-content: center;
+    /* align-items: center; */
+    border: 2px solid white;
+}
+
+.counter .countGrid::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 10%;
+    top: 20%;
+    background-image: url(../img/Caste.svg);
+}
+
+.counter .countGrid>li {
+    padding: 48px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 25%;
+    z-index: 1;
+    border: 2px solid white;
+
+}
+
+.counter .countGrid>li strong {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    font-style: normal;
+    color: #2e2e2e;
+    text-shadow:
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+    transition: 0.3s;
+    top: 0;
+}
+
+.counter .countGrid>li p {
+    bottom: 0;
+    /* border: 2px solid yellowgreen; */
+    display: inline-block;
+    height: 100%;
+}
+
+.counter .inner .countGrid li:hover {
+    color: #2e2e2e;
+}
+
+.counter .inner .countGrid li:hover strong {
+    color: #FFF969;
+    text-shadow:
+        -1px -1px 0 #2e2e2e,
+        1px -1px 0 #2e2e2e,
+        -1px 1px 0 #2e2e2e,
+        1px 1px 0 #2e2e2e;
+}
+
+.counter .countGrid>li::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-color: #FFF969;
+    width: calc(100% - 32px);
+    height: calc(100% - 32px);
+    left: 16px;
+    top: 16px;
+    color: #2e2e2e;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s;
+    /* border: 10px solid #2e2e2e; */
+}
+
+.counter .countGrid>li:hover::before {
+    opacity: 1;
+}
+
+@media (max-width:1200px) {
+    .counter .inner>p {
+        width: 50%;
+    }
+
+    .counter .countGrid>li strong {
+        font-size: 48px;
+    }
+}
+
+@media (max-width:1100px) {
+
+    /* 태블릿 */
+    .counter .countGrid>li strong {
+        font-size: 42px;
+    }
+
+
+    .counter .countGrid::before {
+
+        width: 80px;
+        height: 80px;
+        left: 5%;
+        top: 5%;
+        background-image: url(../img/Caste.svg);
+    }
+
+    .counter .countGrid {
+        margin: 0 40px;
+    }
+
+    .counter .countGrid li {
+        padding: 32px 0;
+        gap: 10px;
+    }
+
+    .counter .countGrid li p {
+        /* border: 1px solid red; */
+        margin: 0 40px;
+    }
+}
+
+@media (max-width:850px) {
+    .counter h2 {
+        margin: 0 64px;
+
+    }
+
+    .counter .countGrid {
+        flex-wrap: wrap;
+        margin-top: 64px;
+    }
+
+    .counter .countGrid>li {
+        width: 50%;
+    }
+}

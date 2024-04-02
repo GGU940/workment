@@ -8,21 +8,26 @@
 }
 
 .wideScrollText {
-    flex-grow: 1;
+    gap: 3rem;
+    /* flex-grow: 1; */
     /* border: 3px solid red; */
     text-transform: uppercase;
     position: relative;
+    width: 6000px;
     display: flex;
-    gap: 40px;
-    padding: 0 20px;
+    justify-content: space-around;
+    padding: 20px 20px;
     align-items: center;
     transform: translateX(0);
-    /* animation-name: scrollRtoL;
-    animation-duration: 15000ms;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite; */
 }
 
+.scrollText .wideScrollText img:nth-last-of-type(2n) {
+    height: 80px;
+}
+
+.scrollText .wideScrollText img:nth-last-of-type(2n-1) {
+    height: 100px;
+}
 
 .scrollText .wideScrollText span {
     font-size: 60px;
@@ -31,13 +36,40 @@
     font-style: normal;
 }
 
-
-@keyframes scrollRtoL {
-    0% {
-        transform: translateX(0);
+@media (max-width:1100px) {
+    .wideScrollText {
+        gap: 2rem;
+        padding: 10px 20px;
     }
 
-    100% {
-        transform: translateX(-100%);
+    .scrollText .wideScrollText span {
+        font-size: 48px;
+    }
+
+    .scrollText .wideScrollText img:nth-last-of-type(2n) {
+        height: 60px;
+    }
+
+    .scrollText .wideScrollText img:nth-last-of-type(2n-1) {
+        height: 80px;
+    }
+}
+
+@media (max-width:750px) {
+    .wideScrollText {
+        gap: 1.5rem;
+        padding: 15px 20px;
+    }
+
+    .scrollText .wideScrollText span {
+        font-size: 38px;
+    }
+
+    .scrollText .wideScrollText img:nth-last-of-type(2n-1) {
+        height: 40px;
+    }
+
+    .scrollText .wideScrollText img:nth-last-of-type(2n) {
+        height: 60px;
     }
 }

@@ -5,7 +5,42 @@
 .project .mw {
     background-color: #f4f4f4;
     border-top: 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
+
+.project .mw::before,
+.project .mw::after,
+.project .inner::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 600px;
+    height: 600px;
+}
+
+.project .mw::before {
+    left: -200px;
+    top: 10%;
+    background: rgb(193, 255, 222);
+    background: radial-gradient(circle, rgba(193, 255, 222, 1) 0%, rgba(193, 255, 222, 0) 80%);
+}
+
+.project .mw::after {
+    right: -250px;
+    top: 300px;
+    background: rgb(212, 202, 255);
+    background: radial-gradient(circle, rgba(212, 202, 255, 1) 0%, rgba(212, 202, 255, 0) 80%);
+}
+
+.project .inner::before {
+    left: -200px;
+    top: 55%;
+    background: rgb(247, 199, 255);
+    background: radial-gradient(circle, rgba(247, 199, 255, 1) 0%, rgba(247, 199, 255, 0) 70%);
+}
+
 
 .project .inner {
 
@@ -14,7 +49,7 @@
 }
 
 .project ul {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     gap: 64px;
@@ -23,6 +58,7 @@
 
 .project .pjBox {
     /* border: 2px solid fuchsia; */
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
@@ -30,8 +66,7 @@
 /* textArea */
 
 .project .textArea {
-    border: 2px solid fuchsia;
-    width: 37%;
+    width: calc(40% - 64px);
 }
 
 .project .textArea>span {
@@ -49,29 +84,30 @@
     border-bottom: 4px solid #2e2e2e;
 }
 
-.project .serviceCard .more {
-    /* border: 2px solid olive; */
+
+.project .pjBox .more {
     position: absolute;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
+
 }
 
-.project .serviceCard .more .moreText {
-    /* border: 2px solid gold; */
+.project .pjBox .more .moreText {
+    /* border: 3px solid yellow; */
     position: absolute;
-    bottom: 50px;
-    left: 32px;
+    left: 0;
+    top: 300px;
 }
 
-.project .serviceCard .more .moreText::after {
+.project .pjBox .more .moreText::after {
     background-image: url(../img/arrow45dark.svg);
     top: 0;
     right: -30px;
 }
 
-.project .serviceCard .more:hover>.moreText::after {
+.project .pjBox:hover>.textArea .moreText::after {
     top: -5px;
     right: -35px;
 }
@@ -85,8 +121,21 @@
     position: relative;
 }
 
+
+.project .imgArea span {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: var(--font-sSub);
+
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
 .project .pjBox:nth-of-type(1) .imgArea {
     background-image: url(../img/Background01.svg);
+
 }
 
 .project .pjBox:nth-of-type(2) .imgArea {
@@ -110,17 +159,102 @@
     object-fit: cover;
     top: 15%;
     left: 15%;
-    /* border: 4px solid #2e2e2e; */
+    transition: 0.3s;
 }
 
 .project .pjBox:nth-of-type(1) .imgArea .maskImg {
     width: 80%;
+    /* 역삼각형 */
     clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
     top: 15%;
     left: 10%;
-    /* border: 4px solid #2e2e2e; */
 }
 
 .project .pjBox:nth-of-type(2) .imgArea .maskImg {
     clip-path: circle(50% at center);
+}
+
+.project .moreBlack {
+    margin: 6rem auto;
+}
+
+/* ----hover---- */
+.project .pjBox .more,
+.project .pjBox .detail {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.project .pjBox:hover .more,
+.project .pjBox:hover .detail {
+    visibility: visible;
+    opacity: 1;
+}
+
+.project .pjBox:hover .imgArea .maskImg {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    /* clip-path: none; */
+    /* clip-path 초기값으로 설정하여 모양이 해제됨 */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+
+@media (max-width:1100px) {
+
+
+    .project .textArea {
+        width: calc(55% - 64px);
+    }
+
+    .project .imgArea {
+        width: 45%;
+        padding-top: 45%;
+    }
+
+
+
+    .project .pjBox .more .moreText {
+
+        top: auto;
+        bottom: 0;
+    }
+}
+
+@media (max-width:880px) {
+    .project .inner {
+        align-items: center;
+        padding: 64px 32px 0 32px;
+    }
+
+    .project .textArea {
+        width: calc(55% - 32px);
+    }
+
+    .project .textArea>span {
+        padding: 12px 0;
+    }
+
+}
+
+@media (max-width:750px) {
+
+    .project .textArea {
+        width: calc(65% - 32px);
+    }
+
+    .project .imgArea {
+        width: 35%;
+        padding-top: 35%;
+    }
+
+    .project .textArea>span {
+        padding: 8px 0;
+    }
+
 }
