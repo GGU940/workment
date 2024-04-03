@@ -349,11 +349,6 @@ section p {
 }
 
 
-
-.foot {
-    position: absolute;
-}
-
 @media (max-width:1100px) {
     /* 태블릿 */
 
@@ -493,4 +488,113 @@ section p {
         display: none;
     }
 
+}
+
+
+
+
+/* --------------footer --------------*/
+
+.foot .mw {
+    background-color: #fff;
+    border-top: 0;
+    border-bottom: 4px solid #2e2e2e
+}
+
+.foot .mw .inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.foot .mw .inner>div {
+    border: 3px solid red;
+    padding: 100px 64px;
+}
+
+.foot .inner .workmentInfo {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.foot .inner .newsletter {
+    width: 55%;
+}
+
+
+
+.foot .inner .workmentInfo p {
+    padding-bottom: 24px;
+}
+
+.foot .inner .workmentInfo strong {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: var(--font-robo);
+}
+
+.foot .inner .workmentInfo .snsBoxs {
+    display: flex;
+    gap: 24px;
+    /* border: 3px solid red; */
+}
+
+.foot .inner .workmentInfo .snsBoxs a {
+    box-shadow: -8px 8px 0 #2E2E2E;
+    background-color: #FFB9DB;
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.foot .inner .workmentInfo .snsBoxs a:hover {
+    box-shadow: -8px 8px 0 #FFB9DB;
+    background-color: #2e2e2e;
+    color: #FFB9DB;
+}
+
+
+.foot .inner .newsletter .letterBox {
+    border: 4px solid #2e2e2e;
+    background-color: #C2F4FF;
+    width: 100%;
+    padding: 48px;
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    position: relative;
+}
+
+.foot .inner .newsletter .letterBox::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/Roket.svg);
+    right: 5%;
+    top: -20%;
+}
+
+.foot .inner .newsletter .letterBox input {
+    border: none;
+    outline: 4px solid #2e2e2e;
+    padding: 24px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: var(--font-robo);
+}
+
+.foot .mw .inner nav {
+    border: 3px solid aqua;
+    width: 100%;
 }
