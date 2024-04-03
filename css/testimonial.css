@@ -4,4 +4,155 @@
 
 .testimonial .inner {
     background-color: #FFB9DB;
+    /* height: 100%; */
+    padding: 200px 64px;
+}
+
+.slideBox {
+    /* border: 4px solid red; */
+    position: relative;
+    width: 750px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+
+/*  .slideCard  */
+.slideBox .slideCard:nth-of-type(1),
+.testimonial .page .page01 {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+.slideBox .slideCard:nth-of-type(1) .job {
+    border-bottom: 4px solid white;
+}
+
+.slideBox .slideCard:nth-of-type(2),
+.testimonial .page .page02 {
+    background-color: white;
+}
+
+.slideBox .slideCard:nth-of-type(3),
+.testimonial .page .page03 {
+    background-color: #FFB9DB;
+}
+
+.slideBox .slideCard {
+    transition: 0.3s;
+
+    border: 4px solid #2e2e2e;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 48px;
+    padding: 48px;
+}
+
+.slideBox .slideCard .circleImg {
+    outline: 4px solid white;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.slideBox .slideCard .circleImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slideBox .slideCard .content {
+    /* border: 4px solid white; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* gap: 8px; */
+}
+
+.slideBox .slideCard .content>* {
+    /* border: 2px solid yellow; */
+    padding: 0.6em 0;
+    line-height: 160%;
+}
+
+
+.slideBox .slideCard .content strong {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 50%;
+    padding: 0;
+}
+
+.slideBox .slideCard .job {
+    border-bottom: 4px solid black;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.slideBox .slideCard .stars {
+    position: absolute;
+    color: #FFE600;
+    right: 0;
+    top: 0;
+}
+
+
+
+/* card slide css */
+
+.slideBox .slideCard.first {
+    z-index: 500;
+    transform: translate(12px, -12px);
+}
+
+.slideBox .slideCard.middle {
+    z-index: 400;
+}
+
+.slideBox .slideCard.last {
+    z-index: 300;
+    transform: translate(-12px, 12px);
+}
+
+
+
+
+/* page */
+.testimonial .page {
+    /* border: 3px solid red; */
+    /* width: 400px; */
+    width: 750px;
+    margin: 32px auto 0 auto;
+    padding: 32px 0 0 0;
+    display: flex;
+    justify-content: right;
+    gap: 12px;
+}
+
+.testimonial .page span {
+    border: 4px solid #2e2e2e;
+    height: 30px;
+    widtH: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.testimonial .page span:hover {
+    transform: rotate(45deg);
+    border-radius: 0 50% 50% 50%;
+
 }

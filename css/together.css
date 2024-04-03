@@ -1,0 +1,49 @@
+.together {
+    background-color: #2e2e2e;
+    background-image: url('../img/Background.png');
+    background-size: cover;
+}
+
+.together .inner {
+    /* border: 3px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 150px 0;
+    gap: 24px;
+    margin: 0 auto;
+}
+
+
+.together .moreBlack {
+    color: #2e2e2e;
+    outline: 4px solid #fff;
+    background-color: #fff;
+    width: 320px;
+    margin-top: 28px;
+}
+
+.together .moreBlack::before {
+    outline: 4px solid #fff;
+}
+
+.together .moreBlack .moreText::after {
+    background-image: url(../img/arrow45dark.svg);
+}
+
+
+
+@media (max-width:1100px) {
+    .together .moreBlack {
+        width: 260px;
+    }
+
+}
+
+@media (max-width:750px) {
+    .together .moreBlack {
+        width: 240px;
+    }
+}

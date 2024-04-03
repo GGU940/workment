@@ -28,9 +28,11 @@
     <link rel="stylesheet" href="./css/project.css">
     <link rel="stylesheet" href="./css/counter.css">
     <link rel="stylesheet" href="./css/testimonial.css">
-    <link rel="stylesheet" href="./css/.css">
     <link rel="stylesheet" href="./css/clientLogo.css">
     <link rel="stylesheet" href="./css/aboutUs.css">
+    <link rel="stylesheet" href="./css/awards.css">
+    <link rel="stylesheet" href="./css/news.css">
+    <link rel="stylesheet" href="./css/together.css">
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
@@ -300,54 +302,65 @@
         <div class="mw">
             <div class="inner">
                 <h2 hidden>testimonial</h2>
-                <ul>
+                <ul class='slideBox'>
                     <!-- 스와이퍼 적용 -->
-                    <li>
+                    <li class='slideCard middle'>
                         <div class="circleImg">
-                            <img src="#" alt="personImg">
+                            <img src="./img/person01.avif" alt="personImg">
                         </div>
                         <div class="content">
                             <strong>Jay Reinemann </strong>
-                            <span>General Partner</span>
-                            <span><i>별</i></span>
+                            <span class='job'>General Partner</span>
+                            <span class='stars'>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
                             <p>Long established fact that a reader will be distracted by designcontent layout.</p>
                         </div>
                     </li>
-                    <li>
+                    <li class='slideCard first'>
                         <div class="circleImg">
-                            <img src="#" alt="personImg">
+                            <img src="./img/person02.jpeg" alt="personImg">
                         </div>
                         <div class="content">
-                            <strong>Jay Reinemann2 </strong>
-                            <span>General Partner</span>
-                            <span><i>별</i></span>
+                            <strong>Elon Musk </strong>
+                            <span class='job'>CEO of Tesla</span>
+                            <span class='stars'>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </span>
                             <p>Long established fact that a reader will be distracted by designcontent layout.</p>
                         </div>
                     </li>
-                    <li>
-                        <div class="circleImg">
-                            <img src="#" alt="personImg">
+                    <li class='slideCard last'>
+                        <div class="circleImg ">
+                            <img src="./img/person03.jpeg" alt="personImg">
                         </div>
                         <div class="content">
-                            <strong>Jay Reinemann3 </strong>
-                            <span>General Partner</span>
-                            <span><i>별</i></span>
+                            <strong>Cristiano Ronaldo</strong>
+                            <span class='job'>Professional footballer</span>
+                            <span class='stars'>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </span>
                             <p>Long established fact that a reader will be distracted by designcontent layout.</p>
                         </div>
                     </li>
-                    <li>
-                        <div class="circleImg">
-                            <img src="#" alt="personImg">
-                        </div>
-                        <div class="content">
-                            <strong>Jay Reinemann4 </strong>
-                            <span>General Partner</span>
-                            <span><i>별</i></span>
-                            <p>Long established fact that a reader will be distracted by designcontent layout.</p>
-                        </div>
-                    </li>
-
                 </ul>
+                <div class="page">
+                    <span class=' page01'></span>
+                    <span class=' page02'></span>
+                    <span class=' page03'></span>
+                </div>
             </div>
             <div class="sideBar sideL sideBarVertical ">
                 <span>Testimonials</span>
@@ -407,29 +420,43 @@
     <section class="awards">
         <div class="mw">
             <div class="inner">
-                <h2>awards(숨김처리하기)</h2>
-
+                <h2 hidden>awards</h2>
                 <ul class="awardList">
                     <li>
-                        <span>2018</span><strong>Designers meeting</strong>
+                        <span>2018</span>
+                        <h3>Designers meeting</h3>
                         <p>It is a long established fact that reader will be distracted readable content of when
                             looking.
                         </p>
                     </li>
                     <li>
-                        <span>2018</span><strong>Designers meeting</strong>
+                        <span>2018</span>
+                        <h3>Designers meeting</h3>
                         <p>It is a long established fact that reader will be distracted readable content of when
                             looking.
                         </p>
                     </li>
                     <li>
-                        <span>2018</span><strong>Designers meeting</strong>
+                        <span>2018</span>
+                        <h3>Designers meeting</h3>
                         <p>It is a long established fact that reader will be distracted readable content of when
                             looking.
                         </p>
                     </li>
                 </ul>
-                <video src="#" class='videoBox'>영상</video>
+                <ul class="videoList">
+                    <li>
+                        <video controls src="./img/movie01.mp4" class='videoBox'>영상</video>
+                    </li>
+                    <li>
+                        <video controls src="./img/movie02.mp4" class='videoBox'>영상</video>
+                    </li>
+                    <li>
+                        <video controls src="./img/movie03.mp4" class='videoBox'>영상</video>
+                    </li>
+                    <button class='videoBtn'><img src="./img/PlayIcon.svg" alt=""></button>
+                </ul>
+
             </div>
             <div class="sideBar sideL sideBarVertical">
                 <span>Awards</span>
@@ -444,45 +471,49 @@
         <div class="mw">
             <div class="inner">
                 <h2>Latest news</h2>
-                <p>It is a long established fact that a reader will be distracted by the readable.</p>
-                <ul>
-                    <li class="blogBox">
-                        <div><img src="#" alt="blog img preview"></div>
-                        <span><i>말풍선아이콘</i>John Smith</span>
-                        <span><i>달력아이콘</i>june 15.22</span>
-                        <strong>Range input with
+                <p>It is a long established fact that a reader <br>will be distracted by the readable.</p>
+                <ul class='blogBox'>
+                    <li class="blogCard">
+                        <div class='postImg'><img src="./img/news1.png" alt="blog img preview"></div>
+                        <div class="postInfo">
+                            <span>John Smith</span>
+                            <span>june 15.22</span>
+                        </div>
+                        <h3>Range input with
                             completely custom
-                            design styles</strong>
+                            design styles</h3>
+                        <a class='blogMore' href="#"></a>
                     </li>
-                    <li class="blogBox">
-                        <div><img src="#" alt="blog img preview"></div>
-                        <span><i>말풍선아이콘</i>John Smith</span>
-                        <span><i>달력아이콘</i>june 15.22</span>
-                        <strong>Range input with
+                    <li class="blogCard">
+                        <div class='postImg'><img src="./img/news2.jpg" alt="blog img preview"></div>
+                        <div class="postInfo">
+                            <span>John Smith</span>
+                            <span>june 15.22</span>
+                        </div>
+                        <h3>Range input with
                             completely custom
-                            design styles</strong>
+                            design styles</h3>
+                        <a class='blogMore' href="#"></a>
                     </li>
                 </ul>
-                <div class="more moreBlack">
-                    <a href="#">More Blog</a>
-                </div>
+                <a href='#' class="more moreBlack"><span class='moreText'>MORE BLOG</span></a>
+
             </div>
             <div class="sideBar sideL sideBarVertical">
                 <span>News</span>
             </div>
             <div class="sideBar sideR">
-                오른쪽 빈칸
+                <!-- 오른쪽 빈칸 -->
             </div>
         </div>
     </section>
 
-    <section class="together wideWrap">
+    <section class="together">
         <div class="inner">
             <p>Need a successful project?</p>
             <h2>Lets Work Together</h2>
-            <div class="more moreBlack">
-                <a href="#">Estimate Project</a>
-            </div>
+            <a href='#' class="more moreBlack"><span class='moreText'>Estimate Project</span></a>
+
         </div>
     </section>
 
