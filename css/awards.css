@@ -126,6 +126,7 @@
     box-shadow: -8px 8px 0 #2e2e2e;
     cursor: pointer;
     visibility: hidden;
+
     opacity: 0;
     transition: 0.3s;
 }

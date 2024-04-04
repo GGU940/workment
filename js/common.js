@@ -115,6 +115,7 @@ let awards = [...awardLists];
 let videos = [...videoLists];
 // console.log(awards, videos);
 let activedVideo = document.querySelector('.awards .first > video');
+
 //*** awards[n] 누르면 ***
 //모든곳 클래스 on 제거
 //클릭된 awards[n] 에 클래스 on 추가
@@ -131,8 +132,10 @@ awards.forEach((award, index) => {
         awards.forEach(award => {
             award.classList.remove('on');
         });
-        videos.forEach(award => {
-            award.classList.remove('first', 'middle', 'last');
+        videos.forEach(video => {
+            video.classList.remove('first', 'middle', 'last');
+            video.querySelector('video').pause();
+            video.querySelector('video').currentTime = 0;
         });
 
         award.classList.add('on');
@@ -140,6 +143,7 @@ awards.forEach((award, index) => {
         videos[index].classList.add('first');
         videos[(index + 1) % 3].classList.add('last');
         videos[(index + 2) % 3].classList.add('middle');
+
 
         // console.log('---', activedVideo);
         return activedVideo = videos[index].querySelector('video');
@@ -152,6 +156,30 @@ awards.forEach((award, index) => {
 const videoBtn = document.querySelector('.awards .videoBtn');
 console.log(activedVideo);
 
-// 클릭하면 해당 li(.first) > video 재생 
-// & 재생-> 정지 아이콘으로 바꿈
-//
+// 클릭하면 해당 li(.first) > video 재생 /정지
+// 재생중이면 -> 정지 아이콘으로 바꿈
+//정지할 때 영상 초기화
+
+videoBtn.addEventListener('click', () => {
+    // console.log('zzzz');
+    if (activedVideo.paused) {
+        activedVideo.play();
+        videoBtn.innerHTML = `<img class='pauseBtn' src="./img/pause.svg" alt="일시정지">`
+    }
+    else if (!activedVideo.paused) {
+        activedVideo.pause();
+        videoBtn.innerHTML = ` <img class='playBtn' src="./img/PlayIcon.svg" alt="재생"> `
+    }
+});
+
+videoBtn.addEventListener('mouseenter', () => {
+    // console.log('zzzz');
+    if (activedVideo.paused) {
+        videoBtn.innerHTML = ` <img class='playBtn' src="./img/PlayIcon.svg" alt="재생"> `
+        // activedVideo.play();
+    }
+    else if (!activedVideo.paused) {
+        // activedVideo.pause();
+        videoBtn.innerHTML = `<img class='pauseBtn' src="./img/pause.svg" alt="일시정지">`
+    }
+});
