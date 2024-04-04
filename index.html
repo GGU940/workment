@@ -41,6 +41,7 @@
 </head>
 
 <body>
+
     <header class="hd">
         <div class="mw">
             <div class="hdWrap">
@@ -49,9 +50,10 @@
                         <img src='./img/Workment.svg' alt='main logo'></img>
                     </h1>
                     <nav>
+                        <!-- <nav class='hamOn'> -->
                         <ul class='gnb'>
                             <li><a href="#">HOME</a></li>
-                            <li><a href="#">WORK</a>
+                            <li class='hasSub'><a href="#">WORK</a>
                                 <ul class='sub'>
                                     <li><a href="#">Who We Are</a></li>
                                     <li><a href="#">Values</a></li>
@@ -60,7 +62,7 @@
                                 </ul>
                             </li>
                             <li><a href="#">ABOUT</a></li>
-                            <li><a href="#">PAGES</a>
+                            <li class='hasSub'><a href="#">PAGES</a>
                                 <ul class='sub'>
                                     <li><a href="#">services</a></li>
                                     <li><a href="#">team</a></li>
@@ -74,25 +76,21 @@
                 <div class="sideBar sideL">
                     <div class="sideWrap">
                         <a href="#">
-                            <img src='./img/Star.svg' alt='main icon'></img>
+                            <img src='./img/Star.svg' alt='main icon'>
                         </a>
-
                     </div>
-
                 </div>
                 <div class="sideBar sideR">
                     <div class="sideWrap">
                         <a href="#">
-                            <img src='./img/iconDm.svg' alt='DM icon'></img>
+                            <img src='./img/iconDm.svg' alt='DM icon'>
                         </a>
-                        <div class='ham'></div>
+                        <div class='ham '></div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
     </header>
-
 
     <section class='mainVisual'>
         <div class="mw">
@@ -520,7 +518,6 @@
         </div>
     </section>
 
-
     <footer class='foot'>
         <section class='footBody mw'>
             <div class="inner">
@@ -554,29 +551,39 @@
             <div class="sideBar sideR">
             </div>
         </section>
+
         <section class='footBottom mw'>
-            <div class="inner">
-                <nav>
-                    <ul class="footNav1">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">WORK</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                    </ul>
-                    <ul class="footNav2">
-                        <li><a href="#">Licenses</a></li>
-                        <li><a href="#">Style Guide </a></li>
-                        <li><a href="#">Changelog </a></li>
-                    </ul>
-                </nav>
-                <p class='copyright'>Copyright © workment | Designed by VictorFlow Templates - Powered by Webflow</p>
+            <div class="footBox">
+                <div class="inner">
+                    <nav>
+                        <ul class="footNav1">
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">WORK</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                        </ul>
+                        <ul class="footNav2">
+                            <li><a href="#">Licenses</a></li>
+                            <li><a href="#">Style Guide </a></li>
+                            <li><a href="#">Changelog </a></li>
+                        </ul>
+                    </nav>
+                    <p class='copyright'>Copyright © workment | Designed by VictorFlow Templates - Powered by Webflow
+                    </p>
+                </div>
+                <div class="sideBar sideL">
+                    <div class="sideWrap"></div>
+                </div>
+                <div class="sideBar sideR">
+                    <div class="sideWrap"></div>
+
+                </div>
             </div>
-            <div class="sideBar sideL">
-                <div class="sideBox"></div>
-                <div class="sideBox"></div>
-            </div>
-            <div class="sideBar sideR">
-                <div class="sideBox"></div>
-                <a class="sideBox goTop" href="#">
+
+        </section>
+
+        <section class="goTop mw">
+            <div class="goBtn ">
+                <a class="sideWrap" href="#">
                     <!-- 위로가기 -->
                 </a>
             </div>

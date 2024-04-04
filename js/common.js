@@ -183,3 +183,35 @@ videoBtn.addEventListener('mouseenter', () => {
         videoBtn.innerHTML = `<img class='pauseBtn' src="./img/pause.svg" alt="일시정지">`
     }
 });
+
+
+
+// ham 버튼
+const nav = document.querySelector('nav');
+const hamBtn = document.querySelector('.ham');
+const liHasSub = document.querySelectorAll('.hasSub');
+
+/* .ham 클릭하면 nav.hamOn 보이도록*/
+hamBtn.addEventListener('click', () => {
+    nav.classList.toggle('hamOn');
+    hamBtn.classList.toggle('hamOn');
+});
+
+/* li.hasSub 클릭하면 >.sub 보이도록 */
+liHasSub.forEach((li) => {
+    li.addEventListener('click', () => {
+        const subEle = li.querySelectorAll('.sub');
+
+        liHasSub.forEach((li) => {
+            if (li.querySelector('.sub').classList.contains('on')) {
+                li.querySelector('.sub').classList.remove('on');
+            }
+
+        });
+
+        subEle.forEach((sub) => {
+            sub.classList.toggle('on');
+        });
+
+    });
+});
