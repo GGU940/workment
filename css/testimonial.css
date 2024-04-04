@@ -156,3 +156,53 @@
     border-radius: 0 50% 50% 50%;
 
 }
+
+
+@media (max-width:1000px) {
+
+    .testimonial .slideBox,
+    .testimonial .page {
+        width: 100%;
+    }
+}
+
+@media (max-width:850px) {
+
+    .testimonial .slideCard .circleImg {
+        width: 90px;
+        height: 90px;
+    }
+
+    .testimonial .slideCard .stars {
+        position: relative;
+    }
+
+}
+
+@media (max-width:750px) {
+    .testimonial .slideBox {
+        height: 450px;
+    }
+
+    .testimonial .slideCard {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .testimonial .slideCard .content {
+        text-align: center;
+    }
+
+
+    .testimonial .slideCard .content .stars {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .testimonial .slideCard .content p {
+        height: 100%;
+    }
+}

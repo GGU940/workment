@@ -28,7 +28,6 @@ function marqueeText(count, element, direction) {
 
     element.style.transform = `translateX( ${count * direction}px )`
     return count;
-
 }
 
 function animate() {
@@ -37,8 +36,6 @@ function animate() {
 
     window.requestAnimationFrame(animate)//에니메이션을 지속적으로 업데이트. 
     //재페인팅 되면서 계속 위치가 바뀌는듯
-
-
 }
 
 //스크롤하면 더 빨리 넘어감
@@ -105,3 +102,56 @@ pageBtn.forEach((ele) => {
 
 
 //-----------------------testimonial  끝-----------------------
+
+
+//-----------------------awards  시작-----------------------
+// testimonial과 같은 기능. 보완해서 작성
+const awardCard = document.querySelector('.awardList>li');
+const awardLists = document.querySelectorAll('.awardList>li');
+const videoLists = document.querySelectorAll('.videoList>li');
+// console.log(awardLists, videoLists);
+
+let awards = [...awardLists];
+let videos = [...videoLists];
+// console.log(awards, videos);
+let activedVideo = document.querySelector('.awards .first > video');
+//*** awards[n] 누르면 ***
+//모든곳 클래스 on 제거
+//클릭된 awards[n] 에 클래스 on 추가
+//해당 video[n] 에 클래스 first 추가
+//해당 video[(n+1)%3===1]에 클래스 last추가
+//해당 video[(n+2)%3===2]에 클래스 middle추가
+//****
+
+
+// 클릭하는 해당 영상 올라오게
+awards.forEach((award, index) => {
+    award.addEventListener('click', () => {
+        // console.log('click~~', index);
+        awards.forEach(award => {
+            award.classList.remove('on');
+        });
+        videos.forEach(award => {
+            award.classList.remove('first', 'middle', 'last');
+        });
+
+        award.classList.add('on');
+
+        videos[index].classList.add('first');
+        videos[(index + 1) % 3].classList.add('last');
+        videos[(index + 2) % 3].classList.add('middle');
+
+        // console.log('---', activedVideo);
+        return activedVideo = videos[index].querySelector('video');
+    });
+});
+
+
+
+// *** 해당 영상 버튼 작동
+const videoBtn = document.querySelector('.awards .videoBtn');
+console.log(activedVideo);
+
+// 클릭하면 해당 li(.first) > video 재생 
+// & 재생-> 정지 아이콘으로 바꿈
+//

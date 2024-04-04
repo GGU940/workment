@@ -1,26 +1,117 @@
 .awards .inner {
     display: flex;
     align-items: center;
-    gap: 64px;
-    padding: 120px 64px;
+    gap: 100px;
+    padding: 140px 64px 140px 32px;
+
 }
 
 .awards .inner .awardList {
-    flex: 1;
-}
-
-.awards .inner .awardList li>* {
-    display: block;
+    height: 800px;
 }
 
 .awards .inner .videoList {
-    /* border: 2px solid green; */
+    height: 792px;
+}
+
+/* 텍스트 리스트 */
+.awards .inner .awardList {
+    flex: 1;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    /* border: 2px solid darkorange; */
+}
+
+.awards .inner .awardList li {
+    padding: 32px;
+    flex: 1;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.awards .inner .awardList li:hover,
+.awards .inner .awardList li.on {
+    background-color: #FCEA2B;
+    box-shadow: -8px 8px 0 #2e2e2e;
+}
+
+.awards .inner .awardList li.on::before {
+    visibility: visible;
+}
+
+.awards .inner .awardList li::before {
+    content: "";
+    visibility: hidden;
+    position: absolute;
+    right: -45px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    background-color: #FCEA2B;
+    width: 50px;
+    height: 50px;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+
+}
+
+.awards .inner .awardList li span {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+}
+
+
+/* 비디오리스트 */
+
+.awards .inner .videoList {
     width: 45%;
-    overflow: hidden;
-    height: 720px;
+    /* overflow: hidden; */
+    /* height: 720px; */
     position: relative;
 }
 
+
+
+.awards .inner .videoList li {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+    left: 0;
+}
+
+.awards .inner .videoList li.first {
+    /* border: 24px solid #FCEA2B; */
+    z-index: 90;
+}
+
+.awards .inner .videoList li.middle {
+    transform: translate(-8px, 8px);
+    z-index: 80;
+}
+
+.awards .inner .videoList li.last {
+    transform: translate(-16px, 16px);
+    z-index: 60;
+}
+
+
+.awards .inner .videoList li video {
+    /* border: 4px solid red; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* video button */
 .awards .inner .videoList .videoBtn {
     position: absolute;
     display: block;
@@ -28,28 +119,22 @@
     height: 150px;
     background-color: #FCEA2B;
     border-radius: 50%;
-    z-index: 10000;
+    z-index: 100;
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
     box-shadow: -8px 8px 0 #2e2e2e;
     cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.awards .inner .videoList:hover .videoBtn {
+    visibility: visible;
+    opacity: 1;
 }
 
 .awards .inner .videoList .videoBtn img {
     width: 50%;
-}
-
-.awards .inner .videoList li {
-    /* border: 8px solid yellow; */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.awards .inner .videoList li video {
-    /* border: 4px solid red; */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
