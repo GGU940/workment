@@ -1,7 +1,3 @@
-.project {
-    background-color: #C2F4FF;
-}
-
 .project .mw {
     background-color: #f4f4f4;
     border-top: 0;
@@ -44,7 +40,11 @@
 
 .project .inner {
     align-items: center;
-    padding: 64px;
+    padding: 150px 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
 }
 
 .project ul {
@@ -74,13 +74,13 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: var(--font-robo);
-    line-height: 140%;
+    font-size: var(--h4-p-span);
+    line-height: var(----p);
     padding: 18px 0
 }
 
 .project .textArea>span:nth-of-type(1) {
-    border-bottom: 4px solid #2e2e2e;
+    border-bottom: 4px solid var(---dark);
 }
 
 
@@ -116,7 +116,7 @@
 .project .imgArea {
     width: 60%;
     padding-top: 60%;
-    border: 4px solid #2e2e2e;
+    border: 4px solid var(---dark);
     position: relative;
 }
 
@@ -125,7 +125,7 @@
     font-family: "Syncopate", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: var(--font-sSub);
+    font-size: var(--more-nav);
 
     position: absolute;
     top: 5%;
@@ -173,9 +173,6 @@
     clip-path: circle(50% at center);
 }
 
-.project .moreBlack {
-    margin: 6rem auto;
-}
 
 /* ----hover---- */
 .project .pjBox .more,
@@ -204,8 +201,11 @@
 }
 
 
-@media (max-width:1100px) {
+@media (max-width:900px) {
 
+    .project .inner {
+        padding: 80px 64px;
+    }
 
     .project .textArea {
         width: calc(55% - 64px);
@@ -216,32 +216,17 @@
         padding-top: 45%;
     }
 
-
-
     .project .pjBox .more .moreText {
-
         top: auto;
-        bottom: 0;
+        bottom: 5%;
     }
 }
 
-@media (max-width:880px) {
+
+@media (max-width:800px) {
     .project .inner {
-        align-items: center;
-        padding: 64px 32px 0 32px;
+        padding: 80px 32px;
     }
-
-    .project .textArea {
-        width: calc(55% - 32px);
-    }
-
-    .project .textArea>span {
-        padding: 12px 0;
-    }
-
-}
-
-@media (max-width:750px) {
 
     .project .textArea {
         width: calc(65% - 32px);
@@ -254,6 +239,11 @@
 
     .project .textArea>span {
         padding: 8px 0;
+    }
+
+    .project .pjBox .more .moreText {
+        top: auto;
+        bottom: 20%;
     }
 
 }
