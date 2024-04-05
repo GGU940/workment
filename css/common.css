@@ -165,10 +165,10 @@ section p {
 }
 
 .more>.moreText {
-    position: relative;
-    border: 3px solid green;
-    transition: 0.3s;
     padding-right: 36px;
+    position: relative;
+    /* border: 3px solid green; */
+    transition: 0.3s;
 }
 
 .more>.moreText::after {
@@ -456,6 +456,14 @@ section p {
 @media (max-width:800px) {
 
     /* 모바일 */
+
+    .more>.moreText {
+        padding-right: 24px;
+    }
+
+    .more.moreBlack {
+        padding: 14px;
+    }
 
     :root {
         /* font */
