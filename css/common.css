@@ -233,7 +233,11 @@ section p {
     position: relative;
     width: 100%;
     cursor: pointer;
-    /* height: 100%; */
+    transition: 0.3s;
+}
+
+.hd .sideBar.sideR:hover .sideWrap {
+    background-color: #daf6cc;
 }
 
 .hd .sideBar .sideWrap a {
@@ -256,6 +260,7 @@ section p {
     height: 50%;
     transition: 1s linear;
 }
+
 
 .hd .sideBar .sideWrap .ham {
     position: absolute;
@@ -437,10 +442,6 @@ section p {
         display: block;
     }
 
-    .hd .sideL:hover {
-        background-color: transparent;
-    }
-
 
     .hd nav {
         max-width: 600px;
@@ -492,10 +493,6 @@ section p {
     }
 
 
-    .hd .sideBar.sideL:hover>.sideWrap img {
-        transform: rotate(180deg);
-    }
-
     .hd .sideBar.sideR {
         display: block;
         width: 50px;
@@ -516,8 +513,7 @@ section p {
         height: 60%;
     }
 
-    .hd .ham.hamOn,
-    .hd .sideWrap:hover {
+    .hd .ham.hamOn {
         background-color: #daf6cc;
     }
 
