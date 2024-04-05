@@ -1,3 +1,29 @@
+.aboutUs {
+    position: relative;
+    z-index: 0;
+}
+
+.aboutUs::before,
+.aboutUs::after {
+    content: "";
+    position: absolute;
+    width: 1300px;
+    height: 1300px;
+}
+
+.aboutUs::before {
+    top: -200px;
+    left: -300px;
+    background: radial-gradient(circle, rgba(203, 193, 255, 1) 0%, rgba(203, 193, 255, 0) 70%);
+}
+
+.aboutUs::after {
+    bottom: 0;
+    right: -500px;
+    background: radial-gradient(circle, rgb(240, 71, 170, 0.6) 0%, rgb(240, 71, 170, 0.4) 40%, rgba(240, 71, 170, 0) 70%);
+    z-index: -1;
+}
+
 .aboutUs .mw {
     background-color: #fff;
     border-top: 0px;

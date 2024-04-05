@@ -11,6 +11,13 @@ let mainSwiper = new Swiper(".mainSwiper", {
     },
 });
 
+const allA = document.querySelectorAll('a');
+allA.forEach((aaa) => {
+    aaa.addEventListener('click', (event) => {
+        event.preventDefault(); // 클릭 이벤트의 기본 동작을 취소
+    });
+})
+
 
 //-----------------------scrollText  시작-----------------------
 
@@ -154,7 +161,7 @@ awards.forEach((award, index) => {
 
 // *** 해당 영상 버튼 작동
 const videoBtn = document.querySelector('.awards .videoBtn');
-console.log(activedVideo);
+// console.log(activedVideo);
 
 // 클릭하면 해당 li(.first) > video 재생 /정지
 // 재생중이면 -> 정지 아이콘으로 바꿈
@@ -190,6 +197,7 @@ videoBtn.addEventListener('mouseenter', () => {
 const nav = document.querySelector('nav');
 const hamBtn = document.querySelector('.ham');
 const liHasSub = document.querySelectorAll('.hasSub');
+const gnbLi = document.querySelectorAll('.gnb>li');
 
 /* .ham 클릭하면 nav.hamOn 보이도록*/
 hamBtn.addEventListener('click', () => {
@@ -198,20 +206,31 @@ hamBtn.addEventListener('click', () => {
 });
 
 /* li.hasSub 클릭하면 >.sub 보이도록 */
-liHasSub.forEach((li) => {
+gnbLi.forEach((li) => {
     li.addEventListener('click', () => {
-        const subEle = li.querySelectorAll('.sub');
-
+        // 모든 sub의 on 없애기
         liHasSub.forEach((li) => {
-            if (li.querySelector('.sub').classList.contains('on')) {
-                li.querySelector('.sub').classList.remove('on');
-            }
-
+            li.querySelector('.sub').classList.remove('on');
         });
+        //만약 .hasSub 인 li라면, >.sub .on추가
+        if (li.classList.contains('hasSub')) {
+            li.querySelector('.sub').classList.toggle('on');
+            //왜 토글이 안 될까요......
+        }
+    });
 
-        subEle.forEach((sub) => {
-            sub.classList.toggle('on');
-        });
+});
 
+
+// 스크롤 높이가 0이 아닐 때 goBtn 보임
+
+
+// goBtn 누르면 맨 위로 이동
+const gotopBtn = document.querySelector('.goBtn');
+gotopBtn.addEventListener('click', (e) => {
+    console.log(window.scrollY);
+    console.log(e);
+    window.scrollTo({
+        top: '0',
     });
 });
