@@ -1,7 +1,7 @@
 .scrollText {
     overflow: hidden;
-    border-top: 4px solid #2e2e2e;
-    border-bottom: 4px solid #2e2e2e;
+    border-top: 4px solid var(---dark);
+    border-bottom: 4px solid var(---dark);
     display: flex;
     position: relative;
     white-space: nowrap;
@@ -9,28 +9,26 @@
 
 .wideScrollText {
     gap: 3rem;
-    /* flex-grow: 1; */
-    /* border: 3px solid red; */
     text-transform: uppercase;
     position: relative;
     width: 6000px;
     display: flex;
     justify-content: space-around;
-    padding: 20px 20px;
+    padding: var(--h4-p-span);
     align-items: center;
     transform: translateX(0);
 }
 
 .scrollText .wideScrollText img:nth-last-of-type(2n) {
-    height: 80px;
+    height: calc(var(--h2) * 2);
 }
 
 .scrollText .wideScrollText img:nth-last-of-type(2n-1) {
-    height: 100px;
+    height: calc(var(--h2) * 2.5);
 }
 
 .scrollText .wideScrollText span {
-    font-size: 60px;
+    font-size: calc(var(--h3) * 2);
     font-family: "Syncopate", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -39,37 +37,13 @@
 @media (max-width:1100px) {
     .wideScrollText {
         gap: 2rem;
-        padding: 10px 20px;
     }
 
-    .scrollText .wideScrollText span {
-        font-size: 48px;
-    }
-
-    .scrollText .wideScrollText img:nth-last-of-type(2n) {
-        height: 60px;
-    }
-
-    .scrollText .wideScrollText img:nth-last-of-type(2n-1) {
-        height: 80px;
-    }
 }
 
 @media (max-width:750px) {
     .wideScrollText {
         gap: 1.5rem;
-        padding: 15px 20px;
     }
 
-    .scrollText .wideScrollText span {
-        font-size: 38px;
-    }
-
-    .scrollText .wideScrollText img:nth-last-of-type(2n-1) {
-        height: 40px;
-    }
-
-    .scrollText .wideScrollText img:nth-last-of-type(2n) {
-        height: 60px;
-    }
 }

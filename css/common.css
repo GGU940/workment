@@ -490,7 +490,7 @@ section p {
     .hd .hdWrap {
         padding-top: 50px;
         box-shadow: 0 8px 0 rgba(0, 0, 0, 0.4);
-        border-bottom: 4px solidvar(---dark);
+        border-bottom: 4px solid var(---dark);
     }
 
     .hd .sideBar.sideL {
@@ -570,11 +570,11 @@ section p {
         display: block;
         /* visibility: visible; */
         z-index: 9999999;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.7);
         position: absolute;
         top: 100%;
         left: 0;
-        height: calc(100vh + 8px);
+        height: 1000vh;
         width: 100%;
     }
 
