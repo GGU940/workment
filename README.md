@@ -16,4 +16,6 @@
 
 🖼️ [시안 figma URL](https://www.figma.com/file/s0AGiGoGCakXrWOttoU1Wr/Agency-Portfolio-Webflow-Website-Template-(Community)?type=design&node-id=1%3A312&mode=design&t=Xf4UCeC4DcLwpGsP-1)
 
+![디자인 시안](./img/__hompage.jpg)
+
 
